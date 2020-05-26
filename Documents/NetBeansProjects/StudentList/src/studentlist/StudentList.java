@@ -7,37 +7,39 @@ import java.util.Scanner;
  *
  * @author Paul Bonenfant
  */
-public class StudentList {
+public class StudentList
+{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+   /**
+    * @param args the command line arguments
+    */
+   public static void main (String[] args)
+   {
 
-        Scanner input = new Scanner(System.in);
+      Scanner input = new Scanner(System.in);
 
-        System.out.println("A simple app");
+      System.out.println("A simple app");
 
-        // create an array of 2 Students
-        Student[] students = new Student[2];
+      // create an array of 2 Students
+      Student[] students = new Student[3];
 
-        for (int i = 0; i < students.length; i++) {
+      for (int i = 0; i < students.length; i++) {
 
-            System.out.println("Enter a name");
-            String name = input.nextLine();
-            
-            Student student = new Student(name);            
-            students[i] = student;                   
-        }
+         System.out.println("Enter a name");
+         String name = input.nextLine();
 
-        String format = "Student name is %s\n";
-        
-        for (Student student: students) {
-        
-            System.out.printf(format, student.getName());
-            
-        }
-        
-    }
+         Student student = new Student(name);
+         students[i] = student;
+      }
+
+      String format = "Student name is %s\n";
+
+      for (Student student : students) {
+
+         System.out.printf(format, student.getName());
+
+      }
+
+   }
 
 }
